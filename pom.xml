@@ -7,7 +7,11 @@
     <groupId>cl.nonius.core</groupId>
     <artifactId>nonius</artifactId>
     <version>1.0</version>
-    <packaging>war</packaging>
+    <modules>
+        <module>services</module>
+        <module>web</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>nonius</name>
     <url>http://www.nonius.cl</url>
@@ -72,6 +76,19 @@
 
     </dependencies>
 
-
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.5</source>
+                        <target>1.5</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
